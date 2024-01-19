@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type="text/css" href="{% static 'portfolio/styles.css ' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Portfolio Website</title>
+    <link rel="icon" type="/image/x-icon" href="{% static 'portfolio/images/myselfphoto2.png' %}">
+</head>
+<body>
+
+    <div class = "hero" id="home">
+       <div class = "detel">
+           <h1>Hello, I'm Rafael <span>Arellanes</span></h1>
+                <p>I am <span class = "auto-type"></span></p>
+                <button class="button" onclick="window.location.href='/static/portfolio/images/Rafael_Arellanes_Current_Resume.docx'">
+                    Download Resume
+                </button>
+        </div>
+   </div>
+
+
+   <div class = "nav-container">
+    <div class = "social">
+            <a href = "https://www.instagram.com/arellanes_1542/"> <!--Replace this # with insta link to show my page-->
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+
+            <a href = "https://github.com/rarell202?tab=projects">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+
+            <a href = "https://www.linkedin.com/in/rafael-arellanes-455598209/">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+    </div>
+    
+</div>
+
+    <div class="taskbar">
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="#home">/Home</a></li>
+                    <li><a href="#about">/About</a></li>
+                    <li><a href="#projects">/Projects</a></li>
+                    <li><a href="#contact">/Contact</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section id="about" class = "section">
+        <div class = "about-content">
+            <div class="about-text">
+                <h2><span>About Me</span></h2>
+                <p>
+                    Hello, my name is Rafael Arellanes! I am a computer science major at Texas Tech University, where I am pursuing my passion for technology and innovation with an interest in Software Engineering.
+                </p>
+            </div>
+            <div class = "about-photo">
+                <img src="{% static 'portfolio/images/Photoofmyself (2).jpg' %}" alt="Rafael Arellanes">
+            </div> 
+        </div>
+    </section>
+
+    <section id="projects" class = "section">
+        <h2><span>My Projects</span></h2>
+        <p>
+            Here are some of my projects that I have been working on.
+        </p>
+        <div class="project-container">
+            <div class="project-box">
+                <h3 class="project-title">Portfolio Website</h3>
+                <p class="project-description">This website showcases my projects and coding skills using HTML, CSS, JavaScript, and Django.
+
+                </p>
+            </div>
+            <div class="project-box">
+                <h3 class="project-title">FoodFinder: HackWesTX</h3>
+                <p class="project-description">This app helps users find nearby restaurants based on their preference with a Tinder-like swiping interface with JavaScript, react.js and Expo Go.</p>
+            </div>
+            <div class="project-box">
+                <h3 class="project-title">Parser Project</h3>
+                <p class="project-description">This is a Python parser that checks the syntax of source code files. This involved desiging and implementing a lexical analyzer and parser.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class = "section">
+        <h2><span>Contact Me</span></h2>
+        <p>If you have any inquiries or would like to get in touch, feel free to reach out to me using the contact information provided.</p>
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="04bdbdf1-7a56-4403-8b31-8a46b65a49fa">
+
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+
+    </section>
+
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["a senior computer science student.", "an aspiring software engineer."],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true
+        })
+    </script>
+
+    <script src = "script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
