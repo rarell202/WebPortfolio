@@ -172,6 +172,7 @@ form textarea {
     margin-bottom: 20px;
     background-color: #0a192f;
     border: 2px solid #64ffda;
+    border-radius: 10px;
     color: #ccd6f6;
 }
 
@@ -179,9 +180,11 @@ form input[type="submit"] {
     padding: 10px 20px;
     background-color: #64ffda;
     border: none;
+    border-radius: 10px;
     color: #0a192f;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-weight: 900;
 }
 
 form input[type="submit"]:hover {
@@ -255,6 +258,7 @@ ion-icon {
     width: auto;
     height: auto;
     background-color: #0a192f;
+    border-radius: 10px;
     border: 2px solid #64ffda;
     padding: 10px;
     margin: 10px;
