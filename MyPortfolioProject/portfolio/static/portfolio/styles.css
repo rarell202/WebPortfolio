@@ -306,7 +306,7 @@ section p {
 /* Social media bar styles */
 .social {
     position: fixed;
-    bottom: 20px;
+    bottom: -5px;
     right: 2px;
     display: flex;
     flex-direction: row;
@@ -319,7 +319,7 @@ section p {
 
 .social a {
     display: block;
-    font-size: 30px;
+    font-size: 40px;
     color: #8892b0;
     margin-bottom: -2px;
 }
@@ -337,7 +337,7 @@ section p {
 /* Taskbar styles */
 .taskbar {
     position: fixed;
-    bottom: 60px;
+    bottom: 40px;
     right: 20px;
     background-color: transparent;
     z-index: 2;
@@ -392,6 +392,9 @@ html {
 
     .about-photo img {
         display: none;
+    }
+    ion-icon {
+        width: 35px;
     }
 
     /* Format Projects Section */
