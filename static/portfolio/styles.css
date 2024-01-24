@@ -40,7 +40,53 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
 }
+
+.button {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: #ccd6f6; /* Updated text color to match your color scheme */
+    border: 2px solid #64ffda; /* Updated border color */
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 100px;
+    height: 100x;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: #64ffda; /* Updated background color */
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button:hover::before {
+    scale: 3;
+  }
+  
+  .button:hover {
+    color: #212121;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
+  }
+  
+  .button:active {
+    scale: 1;
+  }  
 
 /* Hero section styles */
 .hero {
@@ -94,7 +140,7 @@ nav ul li a:hover {
 .detel {
     text-align: center;
     margin: 20px;
-    margin-top: 400px;
+    margin-top: 250px;
 }
 
 .detel h1 {
@@ -126,6 +172,7 @@ form textarea {
     margin-bottom: 20px;
     background-color: #0a192f;
     border: 2px solid #64ffda;
+    border-radius: 10px;
     color: #ccd6f6;
 }
 
@@ -133,9 +180,11 @@ form input[type="submit"] {
     padding: 10px 20px;
     background-color: #64ffda;
     border: none;
+    border-radius: 10px;
     color: #0a192f;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-weight: 900;
 }
 
 form input[type="submit"]:hover {
@@ -161,7 +210,7 @@ span {
     font-weight: bold;
     color: #e6f1ff;
     display: inline-block;
-    margin: 30px 0;
+    margin: 15px 0;
     border-radius: 5px;
 }
 
@@ -206,9 +255,10 @@ ion-icon {
 }
 
 .project-box {
-    width: 300px;
-    height: 200px;
+    width: auto;
+    height: auto;
     background-color: #0a192f;
+    border-radius: 10px;
     border: 2px solid #64ffda;
     padding: 10px;
     margin: 10px;
@@ -239,7 +289,7 @@ ion-icon {
 
 /* Section styles */
 section {
-    padding: 40px;
+    padding: 70px;
     background: #0a192f;
 }
 
@@ -256,7 +306,7 @@ section p {
 /* Social media bar styles */
 .social {
     position: fixed;
-    bottom: 20px;
+    bottom: -5px;
     right: 2px;
     display: flex;
     flex-direction: row;
@@ -269,9 +319,9 @@ section p {
 
 .social a {
     display: block;
-    font-size: 30px;
+    font-size: 40px;
     color: #8892b0;
-    margin-bottom: 10px;
+    margin-bottom: -2px;
 }
 
 .social a:hover {
@@ -287,7 +337,7 @@ section p {
 /* Taskbar styles */
 .taskbar {
     position: fixed;
-    bottom: 60px;
+    bottom: 40px;
     right: 20px;
     background-color: transparent;
     z-index: 2;
@@ -326,4 +376,68 @@ section p {
 
 html {
     scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 768px) {
+    /* Shrink Home Section */
+    .hero {
+        margin-top: -20px;
+    }
+
+    /* Adjust About Section */
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-photo img {
+        display: none;
+    }
+    ion-icon {
+        width: 35px;
+    }
+
+    /* Format Projects Section */
+    .project-container {
+        flex-direction: column;
+    }
+
+    .project-box {
+        width: 100%;
+    }
+
+    /* Size Input Boxes in Contact Section */
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        width: 100%;
+    }
+
+    .social{
+        flex-direction: column;
+    }
+
+    .taskbar {
+        display: flex; /* Hide taskbar by default */
+        position: fixed;
+        top: -10px;
+        left: -30px;
+        width: 100%;
+        height: 60px;
+        background-color: #0a192f;
+        z-index: 2;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .taskbar nav ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        height: 60px; /* Adjust as needed */
+    }
+
+    .taskbar nav ul li {
+        margin: 0 10px;
+    }
 }

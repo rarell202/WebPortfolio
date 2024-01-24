@@ -124,7 +124,7 @@ STATICFILES_DIRS = [
 ]
 
 # The directory where Django will collect static files
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # You can adjust the path as needed
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # You can adjust the path as needed
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
